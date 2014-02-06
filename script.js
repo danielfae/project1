@@ -35,6 +35,8 @@ function updateWaypoints() {
 		}
 	}
 
+	// Seek to the proportional time of the 38s clip of Bey's "Countdown"
+	document.getElementById('Countdown').currentTime = fractionScrolled * 38.0;
 }
 
 function waypointClickHandler(e) {
@@ -57,7 +59,4 @@ function MouseWheelHandler(e) {
 	document.getElementsByTagName('header')[0].innerHTML = scrolled;
 	
 	updateWaypoints();
-
-	// Seek to the proportional time of the 38s clip of Bey's "Countdown"
-	document.getElementById('Countdown').currentTime = fractionScrolled * 38.0;
 }
