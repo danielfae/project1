@@ -1,0 +1,155 @@
+/*
+We're using `calc` a lot to calculate geometry on the fly--
+Check out https://developer.mozilla.org/en-US/docs/Web/CSS/calc for more.
+*/
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	overflow: hidden;
+	min-width: 960px;
+}
+
+header, footer {
+	background-color: #333;
+
+	height: 64px;
+
+	line-height: 64px; /* By making the line-height as tall as the header, we vertically center the text */
+
+	color: #EEE;
+	font-family: "Lily Script One", cursive;
+	font-size: 2em;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.35em;
+
+	width: 100%;
+}
+
+
+main {
+	min-width: 960px;
+	height: calc(100% - 2*64px);
+	background-color: gray;
+}
+
+#content {
+	height: 100%;
+	min-width: 960px;
+	position: relative;
+}
+
+video {
+	position: absolute;
+	top: calc(1.5 * 7.525% + 23.3% - (180px / 2));
+	left: calc(50% - 320px / 2);
+	height: 180px;
+	width: 320px;
+}
+
+#detail {
+	background-color: #AAA;
+
+	position: absolute;
+	
+	height: 23.3%;
+	top: calc(100% - 23.3% - 7.525%);
+
+	left: calc(50% - 320px / 2 - 128px * 1.5);
+	right: calc(50% - 320px / 2 - 128px * 1.5);
+}
+
+/* Clever trick to make a triangle with CSS:
+http://apps.eky.hk/css-triangle-generator/ and
+http://codepen.io/chriscoyier/pen/lotjh */
+#next-triangle {
+	position: absolute;
+
+	width: 0;
+	height: 0;
+
+	border-left: 61px solid transparent;
+	border-right: 61px solid transparent;
+	border-top: 30.75px solid black;
+
+	left: calc(50% - 61px);
+	top: calc(100% - (7.525% + 30.75px)/2);
+
+	font-size: 0;
+
+	line-height: 0;
+}
+
+#next-triangle:hover {
+	border-top: 30.75px solid #555;
+}
+
+/* DETAIL PANELS */
+aside {
+	width: 128px;
+	height: 23.3%;
+	position: absolute;
+}
+
+.right {
+	right: calc(50% - 320px / 2 - 128px * 1.5);
+	background-color: #555;
+}
+
+.left {
+	left: calc(50% - 320px / 2 - 128px * 1.5);
+	background-color: #CCC;
+}
+
+.top {
+	top: 7.525%; /*(100 - 23.3*3)/4%*/
+}
+
+.bottom {
+	top: calc(7.525% * 2 + 23.3%);
+}
+
+/* NAVBAR */
+nav {
+	float: right;
+	width: 32px;
+	height: 100%;
+	left: calc(100% - 32px * 1.5);
+}
+
+nav ol {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	height: 100%;
+	width: 100%;
+}
+
+nav ol li {
+	width: 100%;
+	height: 10%;
+	background-color: black;
+	padding: 0;
+	margin: 0;
+}
+
+.active-waypoint {
+	background-color: #D12121;
+}
+
+li div {
+	background-color: #EEE;
+
+	position: relative;
+	top: 19px;
+
+	width: 16px;
+	height: 16px;
+
+	margin-right: auto;
+	margin-left: auto;	
+}
