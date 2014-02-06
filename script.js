@@ -20,7 +20,7 @@ function updateWaypoints() {
 	fractionScrolled = scrolled / scrollTotal;
 
 	// 0 <= fractionScrolled <= 1, so *10 gives us 10; Math.floor rounds down
-	var whichWaypoint = Math.max(0, Math.floor(fractionScrolled * 10));
+	var whichWaypoint = Math.max(0, Math.floor(fractionScrolled * 10) - 1);
 
 	for (i = 0; i < 10; i++) {
 		// Notice we constructed our li#id names to make this easy
@@ -40,6 +40,7 @@ function updateWaypoints() {
 }
 
 function waypointClickHandler(e) {
+	console.log('cilck');
 	for (i = 0; i < waypoints.length; i++) {
 		if (waypoints[i] === this) {
 			scrolled = (i+1)*100;
