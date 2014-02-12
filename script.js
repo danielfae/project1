@@ -15,6 +15,8 @@ for (i = 0; i < waypoints.length; i++) {
 	// https://developer.mozilla.org/en-US/docs/Web/Reference/Events/click
 	waypoints[i].addEventListener("click", waypointClickHandler, false);
 }
+var triangle = document.getElementById('next-triangle');
+triangle.addEventListener("click", triangleClickHandler, false);
 
 function updateWaypoints() {
 	fractionScrolled = scrolled / scrollTotal;
@@ -40,7 +42,7 @@ function updateWaypoints() {
 }
 
 function waypointClickHandler(e) {
-	console.log('cilck');
+	console.log('click');
 	for (i = 0; i < waypoints.length; i++) {
 		if (waypoints[i] === this) {
 			scrolled = (i+1)*100;
@@ -50,6 +52,17 @@ function waypointClickHandler(e) {
 	}
 }
 
+function triangleClickHandler(e) {
+	console.log('Tclick');
+	
+		if (triangle === this) {
+			scrolled = scrolled+100;
+			if (scrolled>1000){scrolled=0;}
+			updateWaypoints();
+			console.log(scrolled);
+		}
+	
+}
 
 function MouseWheelHandler(e) {
 	// This function is called every time there's a mousewheelevent
