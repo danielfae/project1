@@ -34,9 +34,11 @@ header, footer {
 main {
 	min-width: 960px;
 	height: calc(100% - 2*64px);
-	background-color: gray;
+	background-color: white;
 }
-
+p{
+	font-family: 'Jolly Lodger', cursive;
+}
 #content {
 	height: 100%;
 	min-width: 960px;
@@ -88,9 +90,15 @@ http://codepen.io/chriscoyier/pen/lotjh */
 	border-top: 30.75px solid #555;
 }
 
+#waypoint-1:hover {
+	border-top: 30.75px solid #555;
+	
+}
+
 /* DETAIL PANELS */
+
 aside {
-	width: 128px;
+	width: 170px;
 	height: 23.3%;
 	position: absolute;
 }
@@ -112,6 +120,39 @@ aside {
 
 .bottom {
 	top: calc(7.525% * 2 + 23.3%);
+}
+
+#show1{
+	background-color: white;
+	color: white;
+	font-size: 200%;
+	background-size: cover;
+}
+#show2{
+	background-color: white;
+	background-size: cover;
+}
+#show3{
+	background-color: white;
+	background-size: cover;
+}
+#show4{
+	background-color: white;
+	background-size: cover;
+}
+#detail{
+	display: none;
+}
+
+
+#show1:hover {
+	background-color: gray;
+	transition: 1000ms ease;
+	-webkit-transition: 1000ms ease;
+
+	/* Rotate only 10 degrees so that the effect of translate is more obvious */
+	transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
 }
 
 /* NAVBAR */
