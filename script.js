@@ -3,7 +3,7 @@ var scrolled = 0; // A variable to keep track of how far we've scrolled.
 var fractionScrolled = scrolled / scrollTotal;
 
 
-// You can read more about the mosuewheel event at https://developer.mozilla.org/en-US/docs/DOM/DOM_event_reference/mousewheel
+// You can read more about the mousewheel event at https://developer.mozilla.org/en-US/docs/DOM/DOM_event_reference/mousewheel
 if (document.addEventListener) {
 	document.addEventListener("mousewheel", MouseWheelHandler, false);
 }
@@ -36,7 +36,7 @@ function updateWaypoints() {
 	}
 
 	// Seek to the proportional time of the 38s clip of Bey's "Countdown"
-	document.getElementById('Countdown').currentTime = fractionScrolled * 38.0;
+	document.getElementById('Countdown').currentTime = fractionScrolled * 20.0;
 }
 
 function waypointClickHandler(e) {
