@@ -90,10 +90,30 @@ http://codepen.io/chriscoyier/pen/lotjh */
 	border-top: 30.75px solid #555;
 }
 
-#waypoint-1:hover {
-	border-top: 30.75px solid #555;
-	
+#waypoint-0, #waypoint-1, #waypoint-2, #waypoint-3,
+#waypoint-4, #waypoint-5, #waypoint-6,
+#waypoint-7, #waypoint-8, #waypoint-9,
+{display:none;}
+#waypoint-1:hover, #waypoint-2:hover, #waypoint-3:hover,
+#waypoint-4:hover, #waypoint-5:hover, #waypoint-6:hover,
+#waypoint-7:hover, #waypoint-8:hover, #waypoint-9:hover, {
+	background-color: gray;
+	transition: 1000ms ease;
+	-webkit-transition: 1000ms ease;
+	font-size: 100%;
+	transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
 }
+#waypoint-0:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
+#waypoint-1:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
+#waypoint-2:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
+#waypoint-3:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
+#waypoint-4:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
+#waypoint-5:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
+#waypoint-6:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
+#waypoint-7:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
+#waypoint-8:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
+#waypoint-9:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
 
 /* DETAIL PANELS */
 
@@ -177,6 +197,7 @@ nav ol li {
 	background-color: black;
 	padding: 0;
 	margin: 0;
+	font-family: 'Jolly Lodger', cursive;
 }
 
 .active-waypoint {
