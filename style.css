@@ -90,30 +90,28 @@ http://codepen.io/chriscoyier/pen/lotjh */
 	border-top: 30.75px solid #555;
 }
 
+.waypoint{
+	border-radius: 50%;
+
+}
+.waypoint:hover{
+	box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+}
+
 #waypoint-0, #waypoint-1, #waypoint-2, #waypoint-3,
 #waypoint-4, #waypoint-5, #waypoint-6,
 #waypoint-7, #waypoint-8, #waypoint-9,
-{display:none;}
+{border-radius: 50%;}
 #waypoint-1:hover, #waypoint-2:hover, #waypoint-3:hover,
 #waypoint-4:hover, #waypoint-5:hover, #waypoint-6:hover,
-#waypoint-7:hover, #waypoint-8:hover, #waypoint-9:hover, {
+#waypoint-7:hover, #waypoint-8:hover, #waypoint-9:hover {
 	background-color: gray;
 	transition: 1000ms ease;
 	-webkit-transition: 1000ms ease;
 	font-size: 100%;
-	transform: rotate(10deg);
-	-webkit-transform: rotate(10deg);
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
 }
-#waypoint-0:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
-#waypoint-1:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
-#waypoint-2:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
-#waypoint-3:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
-#waypoint-4:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
-#waypoint-5:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
-#waypoint-6:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
-#waypoint-7:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
-#waypoint-8:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
-#waypoint-9:hover{background-color: gray;transition: 1000ms ease;-webkit-transition: 1000ms ease;font-size: 100%;transform: rotate(10deg);-webkit-transform: rotate(10deg);}
 
 /* DETAIL PANELS */
 
@@ -147,18 +145,25 @@ aside {
 	color: white;
 	font-size: 200%;
 	background-size: cover;
+	background-clip: border-box;
 }
 #show2{
 	background-color: white;
 	background-size: cover;
+	background-clip: border-box;
+	
 }
 #show3{
 	background-color: white;
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-clip: border-box;
 }
 #show4{
 	background-color: white;
 	background-size: cover;
+	background-clip: border-box;
 }
 #detail{
 	display: none;
@@ -178,7 +183,7 @@ aside {
 /* NAVBAR */
 nav {
 	float: right;
-	width: 32px;
+	width: 50.688px;
 	height: 100%;
 	left: calc(100% - 32px * 1.5);
 }
@@ -200,12 +205,16 @@ nav ol li {
 	font-family: 'Jolly Lodger', cursive;
 }
 
-.active-waypoint {
-	background-color: #D12121;
+.active-waypoint{
+	background-color: red;
+	box-shadow: 0px 0px 20px rgba(255,10,50,0.8);
+	border-radius: 50%;
 }
 
+
+
 li div {
-	background-color: #EEE;
+	background-color: #FFF;
 
 	position: relative;
 	top: 19px;
@@ -214,5 +223,7 @@ li div {
 	height: 16px;
 
 	margin-right: auto;
-	margin-left: auto;	
+	margin-left: auto;
+	margin-top: auto;
+	margin-bottom: auto;		
 }

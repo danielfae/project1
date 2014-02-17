@@ -28,12 +28,15 @@ function updateWaypoints() {
 		// Notice we constructed our li#id names to make this easy
 		var currentWaypoint = document.getElementById('waypoint-' + i);
 		
+		
 		if ( i == whichWaypoint ) {
 			currentWaypoint.classList.add('active-waypoint');
+			
 		}
 		
 		else {
 			currentWaypoint.classList.remove('active-waypoint');
+
 		}
 	}
 
@@ -93,7 +96,7 @@ function triangleClickHandler(e) {
 }
 
 
-if (scrolled>100){document.getElementById('show').setAttribute('style','background-color: yellow;');}
+
 
 function MouseWheelHandler(e) {
 	// This function is called every time there's a mousewheelevent
