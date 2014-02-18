@@ -37,7 +37,9 @@ main {
 	background-color: white;
 }
 p{
-	font-family: 'Jolly Lodger', cursive;
+	font-family: 'Lily Script One', cursive;
+
+
 }
 #content {
 	height: 100%;
@@ -47,7 +49,7 @@ p{
 
 video {
 	position: absolute;
-	top: calc(1.5 * 7.525% + 23.3% - (180px / 2));
+	top: calc(1.5 * 4% + 23.3% - (180px / 2));
 	left: calc(50% - 320px / 2);
 	height: 180px;
 	width: 320px;
@@ -55,12 +57,11 @@ video {
 
 #detail {
 	background-color: #AAA;
-
+	padding-left: 0px 0px 0px 12px;
+	overflow: auto;
 	position: absolute;
-	
-	height: 23.3%;
-	top: calc(100% - 23.3% - 7.525%);
-
+	height: 33%;
+	top: calc(100% - 33% - 12%);
 	left: calc(50% - 320px / 2 - 128px * 1.5);
 	right: calc(50% - 320px / 2 - 128px * 1.5);
 }
@@ -109,8 +110,8 @@ http://codepen.io/chriscoyier/pen/lotjh */
 	transition: 1000ms ease;
 	-webkit-transition: 1000ms ease;
 	font-size: 100%;
-	transform: rotate(360deg);
-	-webkit-transform: rotate(360deg);
+	transform: rotate(15deg);
+	-webkit-transform: rotate(15deg);
 }
 
 /* DETAIL PANELS */
@@ -133,11 +134,11 @@ aside {
 }
 
 .top {
-	top: 7.525%; /*(100 - 23.3*3)/4%*/
+	top: 4%; /*(100 - 23.3*3)/4%*/
 }
 
 .bottom {
-	top: calc(7.525% * 2 + 23.3%);
+	top: calc(4% * 2 + 23.3%);
 }
 
 #show1{
@@ -211,7 +212,38 @@ nav ol li {
 	border-radius: 50%;
 }
 
+.active-waypoint:hover{
+-webkit-transition-duration: 350ms;
+-moz-transition-duration: 350ms;
+transition-duration: 350ms;
+-webkit-transition-duration: 350ms;
+-moz-transition-duration: 350ms;
+transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+}
 
+li div .label {
+color: blue;
+display: block;
+position: relative;
+top: 1px;
+left:-60px;
+padding-right: -30px;
+opacity: 0;
+-webkit-transition-property: color, opacity;
+-moz-transition-property: color, opacity;
+transition-property: color, opacity;
+-webkit-transition-duration: 350ms;
+-moz-transition-duration: 350ms;
+transition-duration: 350ms;
+-webkit-transition-timing-function: ease-in-out;
+-moz-transition-timing-function: ease-in-out;
+transition-timing-function: ease-in-out;
+}
+
+li:hover .label{
+	opacity: 1;
+}
 
 li div {
 	background-color: #FFF;

@@ -32,6 +32,7 @@ function updateWaypoints() {
 		if ( i == whichWaypoint ) {
 			currentWaypoint.classList.add('active-waypoint');
 			
+			
 		}
 		
 		else {
@@ -113,7 +114,7 @@ function MouseWheelHandler(e) {
 			}
 			
 			if (scrolled>300){
-				document.getElementById('show1').setAttribute('style','visibility:hidden;');
+				document.getElementById('show1').setAttribute('style','color:white;');
 				document.getElementById('show2').setAttribute('style','background-image: url(http://www.noreasterlongboards.com/shop/images/511/9-10Charger+%281%29.png?240,240,0,0,80,1266356134);');
 				
 			}
