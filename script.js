@@ -31,7 +31,7 @@ function updateWaypoints() {
 		
 		if ( i == whichWaypoint ) {
 			currentWaypoint.classList.add('active-waypoint');
-			
+
 			
 		}
 		
@@ -65,27 +65,42 @@ function triangleClickHandler(e) {
 			if (scrolled>100){
 				document.getElementById('show1').setAttribute('style','background-image: url(http://www.noreasterlongboards.com/shop/images/511/9-10Charger+%281%29.png?240,240,0,0,80,1266356134);');
 				document.getElementById('show1').setAttribute('style','color: black;');
+				document.getElementById('show1').classList.add('animated');
+				document.getElementById('show1').classList.add('swing');
 			}
 			
 			if (scrolled>300){
+				document.getElementById('show1').classList.remove('swing');
 				document.getElementById('show1').setAttribute('style','visibility:hidden;');
 				document.getElementById('show2').setAttribute('style','background-image: url(http://www.noreasterlongboards.com/shop/images/511/9-10Charger+%281%29.png?240,240,0,0,80,1266356134);');
+				document.getElementById('show2').classList.add('animated');
+				document.getElementById('show2').classList.add('tada');
 				
 			}
 
 			if (scrolled>500){
+				document.getElementById('show2').classList.remove('tada');
 				document.getElementById('show2').setAttribute('style','background-image: url();')
 				document.getElementById('show3').setAttribute('style','background-image: url(http://static.wix.com/media/8c92f6_cf34875c84b24755a74f4950a3395973.png_256);');
+				document.getElementById('show3').classList.add('animated');
+				document.getElementById('show3').classList.add('slideInRight');
 			}
 
 			if (scrolled>800){
+				document.getElementById('show3').classList.remove('slideInRight');
 				document.getElementById('show3').setAttribute('style','background-image: url();')
 				document.getElementById('show4').setAttribute('style','background-image: url(http://www.outdareadventures.com/wp-content/uploads/2012/10/Redbull-Downhill-Longboarding.jpg);');
+				document.getElementById('show4').classList.add('animated');
+				document.getElementById('show4').classList.add('rollIn');
 				document.getElementById('detail').setAttribute('style','display:block;');
+				document.getElementById('detail').classList.add('animated');
+				document.getElementById('detail').classList.add('bounceInUp');
 			}
 			
 			if (scrolled>1000){
 				scrolled=0;
+				document.getElementById('show4').classList.remove('rollIn');
+				document.getElementById('show2').classList.remove('bounceInUp');
 				document.getElementById('detail').setAttribute('style','display:none;');
 				document.getElementById('show4').setAttribute('style','background-image: url();');
 			}
@@ -108,33 +123,49 @@ function MouseWheelHandler(e) {
 	document.getElementsByTagName('header')[0].innerHTML = scrolled;
 	
 
-				if (scrolled>100){
+			if (scrolled>100){
 				document.getElementById('show1').setAttribute('style','background-image: url(http://www.noreasterlongboards.com/shop/images/511/9-10Charger+%281%29.png?240,240,0,0,80,1266356134);');
 				document.getElementById('show1').setAttribute('style','color: black;');
+				document.getElementById('show1').classList.add('animated');
+				document.getElementById('show1').classList.add('swing');
 			}
 			
 			if (scrolled>300){
-				document.getElementById('show1').setAttribute('style','color:white;');
+				document.getElementById('show1').classList.remove('swing');
+				document.getElementById('show1').setAttribute('style','visibility:hidden;');
 				document.getElementById('show2').setAttribute('style','background-image: url(http://www.noreasterlongboards.com/shop/images/511/9-10Charger+%281%29.png?240,240,0,0,80,1266356134);');
+				document.getElementById('show2').classList.add('animated');
+				document.getElementById('show2').classList.add('tada');
 				
 			}
 
 			if (scrolled>500){
+				document.getElementById('show2').classList.remove('tada');
 				document.getElementById('show2').setAttribute('style','background-image: url();')
 				document.getElementById('show3').setAttribute('style','background-image: url(http://static.wix.com/media/8c92f6_cf34875c84b24755a74f4950a3395973.png_256);');
+				document.getElementById('show3').classList.add('animated');
+				document.getElementById('show3').classList.add('slideInRight');
 			}
 
 			if (scrolled>800){
+				document.getElementById('show3').classList.remove('slideInRight');
 				document.getElementById('show3').setAttribute('style','background-image: url();')
 				document.getElementById('show4').setAttribute('style','background-image: url(http://www.outdareadventures.com/wp-content/uploads/2012/10/Redbull-Downhill-Longboarding.jpg);');
+				document.getElementById('show4').classList.add('animated');
+				document.getElementById('show4').classList.add('rollIn');
 				document.getElementById('detail').setAttribute('style','display:block;');
+				document.getElementById('detail').classList.add('animated');
+				document.getElementById('detail').classList.add('bounceInUp');
 			}
 			
-			if (scrolled>1000){
+			if (scrolled>999){
 				scrolled=0;
+				document.getElementById('show4').classList.remove('rollIn');
+				document.getElementById('show2').classList.remove('bounceInUp');
 				document.getElementById('detail').setAttribute('style','display:none;');
 				document.getElementById('show4').setAttribute('style','background-image: url();');
 			}
+
 
 
 	updateWaypoints();
